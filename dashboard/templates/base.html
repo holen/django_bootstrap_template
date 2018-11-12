@@ -1,0 +1,332 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Devops - Open Source Ops Manage Web">
+    <meta name="author" content="holen">
+    <meta name="keyword" content="Django, devops, cmdb">
+    <title>Devops</title>
+    <!-- Icons-->
+    <link href="{% static 'dashboard/vendors/@coreui/icons/css/coreui-icons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'dashboard/vendors/flag-icon-css/css/flag-icon.min.css' %}" rel="stylesheet">
+    <link href="{% static 'dashboard/vendors/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'dashboard/vendors/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet">
+    <!-- Main styles for this application-->
+    <link href="{% static 'dashboard/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'dashboard/vendors/pace-progress/css/pace.min.css' %}" rel="stylesheet">
+  </head>
+  <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    <header class="app-header navbar">
+      <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img class="navbar-brand-full" src="{% static 'dashboard/img/brand/logo.svg' %}" width="89" height="25" alt="CoreUI Logo">
+        <img class="navbar-brand-minimized" src="{% static 'dashboard/img/brand/sygnet.svg' %}" width="30" height="30" alt="CoreUI Logo">
+      </a>
+      <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- 顶部左侧导航 -->
+      <ul class="nav navbar-nav d-md-down-none">
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">Users</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">Settings</a>
+        </li>
+      </ul>
+      <!-- 顶部左侧导航 -->
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item d-md-down-none">
+          <a class="nav-link" href="#">
+            <i class="icon-bell"></i>
+            <span class="badge badge-pill badge-danger">5</span>
+          </a>
+        </li>
+        <li class="nav-item d-md-down-none">
+          <a class="nav-link" href="#">
+            <i class="icon-list"></i>
+          </a>
+        </li>
+        <li class="nav-item d-md-down-none">
+          <a class="nav-link" href="#">
+            <i class="icon-location-pin"></i>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <img class="img-avatar" src="{% static 'dashboard/img/avatars/6.jpg' %}" alt="admin@bootstrapmaster.com">
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-header text-center">
+              <strong>Account</strong>
+            </div>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-bell-o"></i> Updates
+              <span class="badge badge-info">42</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-envelope-o"></i> Messages
+              <span class="badge badge-success">42</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-tasks"></i> Tasks
+              <span class="badge badge-danger">42</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-comments"></i> Comments
+              <span class="badge badge-warning">42</span>
+            </a>
+            <div class="dropdown-header text-center">
+              <strong>Settings</strong>
+            </div>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-user"></i> Profile</a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-wrench"></i> Settings</a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-usd"></i> Payments
+              <span class="badge badge-secondary">42</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-file"></i> Projects
+              <span class="badge badge-primary">42</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-shield"></i> Lock Account</a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-lock"></i> Logout</a>
+          </div>
+        </li>
+      </ul>
+      <button class="navbar-toggler aside-menu-toggler d-md-down-none" type="button" data-toggle="aside-menu-lg-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <button class="navbar-toggler aside-menu-toggler d-lg-none" type="button" data-toggle="aside-menu-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </header>
+    <div class="app-body">
+      <div class="sidebar">
+        <nav class="sidebar-nav">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="nav-icon icon-speedometer"></i> Dashboard
+              </a>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-puzzle"></i> 站点中心</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon icon-puzzle"></i> Breadcrumb</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/forms.html">
+                    <i class="nav-icon icon-puzzle"></i> Forms</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/jumbotron.html">
+                    <i class="nav-icon icon-puzzle"></i> Jumbotron</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/list-group.html">
+                    <i class="nav-icon icon-puzzle"></i> List group</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/navs.html">
+                    <i class="nav-icon icon-puzzle"></i> Navs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base/pagination.html">
+                    <i class="nav-icon icon-puzzle"></i> Pagination</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-drop"></i> cmdb 管理</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="buttons/buttons.html">
+                    <i class="nav-icon icon-drop"></i> 本地服务器</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="buttons/button-group.html">
+                    <i class="nav-icon icon-drop"></i> 云服务器</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-cursor"></i> 发布平台</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="buttons/buttons.html">
+                    <i class="nav-icon icon-cursor"></i> dev 环境</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="buttons/button-group.html">
+                    <i class="nav-icon icon-cursor"></i> Alpha 环境</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="buttons/dropdowns.html">
+                    <i class="nav-icon icon-cursor"></i> beta 环境</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="buttons/brand-buttons.html">
+                    <i class="nav-icon icon-cursor"></i> 生产环境</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-star"></i> Mysql 中心</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="icons/coreui-icons.html">
+                    <i class="nav-icon icon-star"></i> CoreUI Icons
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="icons/flags.html">
+                    <i class="nav-icon icon-star"></i> Flags</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="icons/font-awesome.html">
+                    <i class="nav-icon icon-star"></i> Font Awesome
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="icons/simple-line-icons.html">
+                    <i class="nav-icon icon-star"></i> Simple Line Icons</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-bell"></i> Redis 中心</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="notifications/alerts.html">
+                    <i class="nav-icon icon-bell"></i> Alerts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="notifications/badge.html">
+                    <i class="nav-icon icon-bell"></i> Badge</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="notifications/modals.html">
+                    <i class="nav-icon icon-bell"></i> Modals</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-pencil"></i> 作业管理</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="notifications/alerts.html">
+                    <i class="nav-icon icon-pencil"></i> Alerts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="notifications/badge.html">
+                    <i class="nav-icon icon-pencil"></i> Badge</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="notifications/modals.html">
+                    <i class="nav-icon icon-pencil"></i> Modals</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-pie-chart"></i> Pages</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% static 'login.html' %}" target="_top">
+                    <i class="nav-icon icon-pie-chart"></i> Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% static 'register.html' %}" target="_top">
+                    <i class="nav-icon icon-pie-chart"></i> Register</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% static '404.html' %}" target="_top">
+                    <i class="nav-icon icon-pie-chart"></i> Error 404</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% static '500.html' %}" target="_top">
+                    <i class="nav-icon icon-star"></i> Error 500</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+      </div>
+      <main class="main">
+          <!-- Breadcrumb-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">Home</li>
+          <li class="breadcrumb-item">
+            <a href="#">Admin</a>
+          </li>
+          <li class="breadcrumb-item active">Dashboard</li>
+          <!-- Breadcrumb Menu-->
+          <li class="breadcrumb-menu d-md-down-none">
+            <div class="btn-group" role="group" aria-label="Button group">
+              <a class="btn" href="#">
+                <i class="icon-speech"></i>
+              </a>
+              <a class="btn" href="./">
+                <i class="icon-graph"></i>  Dashboard</a>
+              <a class="btn" href="#">
+                <i class="icon-settings"></i>  Settings</a>
+            </div>
+          </li>
+        </ol>
+          {% block main %}
+          {% endblock main %}
+      </main>
+      <aside class="aside-menu">
+          {% block aside %}
+          {% endblock aside %}
+      </aside>
+    </div>
+    <footer class="app-footer">
+      <div>
+        <a href="#">Devops</a>
+        <span>&copy; 2018 </span>
+      </div>
+      <div class="ml-auto">
+        <span>Powered by</span>
+        <a href="#">Devops</a>
+      </div>
+    </footer>
+    <!-- CoreUI and necessary plugins-->
+    <script src="{% static 'dashboard/vendors/jquery/js/jquery.min.js' %}"></script>
+    <script src="{% static 'dashboard/vendors/popper.js/js/popper.min.js' %}"></script>
+    <script src="{% static 'dashboard/vendors/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'dashboard/vendors/pace-progress/js/pace.min.js' %}"></script>
+    <script src="{% static 'dashboard/vendors/perfect-scrollbar/js/perfect-scrollbar.min.js' %}"></script>
+    <script src="{% static 'dashboard/vendors/@coreui/coreui/js/coreui.min.js' %}"></script>
+    <!-- Plugins and scripts required by this view-->
+    <script src="{% static 'dashboard/vendors/chart.js/js/Chart.min.js' %}"></script>
+    <script src="{% static 'dashboard/vendors/@coreui/coreui-plugin-chartjs-custom-tooltips/js/custom-tooltips.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/main.js' %}"></script>
+  </body>
+</html>
