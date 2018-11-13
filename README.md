@@ -23,6 +23,19 @@
         'dashboard.apps.AppConfig',
     ]
     
+配置数据库信息
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'dbname',
+            'USER': 'username',
+            'PASSWORD': 'password',
+            'HOST': 'host_ip',
+            'PORT': 'port',
+        }
+    }
+        
 生成数据表与管理员账户
 
     python manage.py migrate
