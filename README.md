@@ -17,6 +17,8 @@
     pip install -r requirements.txt
     
 配置文件设置
+可以直接把 devops/settings_template.py 重命名为 devops/setttings.py 就可以    
+也可以自己新建设置，如下
 
     INSTALLED_APPS = [
         ...
